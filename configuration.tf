@@ -24,7 +24,7 @@ resource "google_project_iam_member" "clement_rights" {
 resource "google_project_iam_member" "alex_rights" {
     project = "dsn-dev-01"
     role    = "roles/editor"
-    member  = "user:alexandre.giraud@imt-atlantique.net"
+    member  = "user:alexandre.giraud18@gmail.com"
 }
 
 resource "google_project_iam_member" "mt_rights" {
