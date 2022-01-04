@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-    credentials = file("C:\\Users\\Giraud-Alexandre\\.ssh\\dsn-dev-01-c54f6a31d417.json")
+    credentials = file("C:\\Users\\LENOVO\\Documents\\.ssh\\dsn-dev-01-52cb45ee6e28.json")
 
     project = var.project_id
     region  = var.region
@@ -34,11 +34,11 @@ resource "google_project_iam_member" "mt_rights" {
 }
 
 resource "google_storage_bucket" "wildfire_dsn" {
-  name          = "wildfire_dsn"
-  location      = var.region
-  force_destroy = true
-  project = var.project_id
-  storage_class = "STANDARD"
+    name          = "wildfire_dsn"
+    location      = var.region
+    force_destroy = true
+    project = var.project_id
+    storage_class = "STANDARD"
 
 }
 
