@@ -5,7 +5,7 @@ If you want to change something, you must change the configuration file so it's 
 For now, just change the line  credentials = file("<NAME>.json")
 Instead of name, put the path were you stored the service account key file.
 
-Once your configuration is ready, to implement your modifications, you msut run :
+Once your configuration is ready, to implement your modifications, go to a specific folder (iam if you want to add a permission for instance) you msut run :
 - terraform init
 - terraform plan
 - terraform apply
