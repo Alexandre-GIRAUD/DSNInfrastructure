@@ -10,6 +10,17 @@ resource "google_project_iam_member" "ci_cd_sa_rights" {
     member  = "serviceAccount:ci-cd-sa-dev01@dsn-dev-01.iam.gserviceaccount.com"
 } 
 
+resource "google_service_account" "backend_sa" {
+    account_id   = "backend-sa-dev01"
+    display_name = "Service Account representing the Backend service"
+}
+
+resource "google_project_iam_member" "backend_sa_rights" {
+    project = var.project_id
+    role    = "roles/editor"
+    member  = "serviceAccount:backend-sa-dev01@dsn-dev-01.iam.gserviceaccount.com"
+} 
+
 resource "google_artifact_registry_repository_iam_member" "viewer-ci-backend" {
     provider = google-beta
     project = var.project_id
