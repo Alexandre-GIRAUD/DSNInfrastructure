@@ -14,3 +14,10 @@ resource "google_bigquery_dataset" "Verbatim_dataset" {
     location = var.region
     project = var.project_id
 }
+
+resource "google_bigquery_dataset" "metadata_dataset" {
+    dataset_id = "meta_data_dataset"
+    description = "This dataset contains all the information sent by the client when the dataset was created"
+    location = var.region
+    project = var.project_id
+}
