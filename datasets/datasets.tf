@@ -21,3 +21,10 @@ resource "google_bigquery_dataset" "metadata_dataset" {
     location = var.region
     project = var.project_id
 }
+
+resource "google_bigquery_dataset" "user_metrics_dataset" {
+    dataset_id = "user_metrics_dataset"
+    description = "This dataset contains the metrics used to assess users' involvment"
+    location = var.region
+    project = var.project_id
+}
